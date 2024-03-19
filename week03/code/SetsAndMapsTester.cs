@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.VisualBasic;
 
 public static class SetsAndMapsTester
 {
@@ -159,7 +160,12 @@ public static class SetsAndMapsTester
         foreach (var line in File.ReadLines(filename))
         {
             var fields = line.Split(",");
-            // Todo Problem 2 - ADD YOUR CODE HERE
+            string degreeName = fields[3];
+            if (!degrees.ContainsKey(degreeName)) {
+                degrees.Add(degreeName, 1);
+            } else {
+                degrees[degreeName]++;
+            }
         }
 
         return degrees;
