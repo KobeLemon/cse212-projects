@@ -193,7 +193,53 @@ public static class SetsAndMapsTester
     private static bool IsAnagram(string word1, string word2)
     {
         // Todo Problem 3 - ADD YOUR CODE HERE
-        return false;
+        /* Steps:
+            TODO HAVE TO USE A DICTIONARY, NEED TO CHANGE THESE STEPS TO USE DICTIONARY
+
+            1. split word1 into array by spaces
+            2. split word2 into array by spaces
+            3. check if word1 array length is equal to word2 length
+            4. if #3 is false, that's an auto-fail & return false
+            5. if #3 is true, use Array.Sort(word1) & Array.Sort(word2) to sort them alphabetically
+            6. In #5's if statement: create a for (not foreach) loop that iterates through word1
+            7. In #6's for loop: check if each item (using ToLowerCase to ignore case) matches the same item in word2.
+            8. If #7's if statement: if word1's item does not match word2's item, return false. Else continue next iteration.
+            9. Outside of #6's for loop, return true.
+        */
+
+        if (word1.Length != word2.Length) { return false; }
+
+        Dictionary<char, int> amount1 = new Dictionary<char, int>();
+        Dictionary<char, int> amount2 = new Dictionary<char, int>();
+
+        foreach (char item in word1)
+        {
+            if (amount1.ContainsKey(item)) {
+                amount1[item]++;
+            } else
+            {
+                amount1[item] = 1;
+            }
+        }
+
+        foreach (char item in word2)
+        {
+            if (amount2.ContainsKey(item)) {
+                amount2[item]++;
+            } else
+            {
+                amount2[item] = 1;
+            }
+        }
+
+        foreach (var item in amount1)
+        {
+            if (!amount2.ContainsKey(item.Key) || amount2[item.Key] != item.Value) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /// <summary>
