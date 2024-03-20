@@ -161,9 +161,12 @@ public static class SetsAndMapsTester
         {
             var fields = line.Split(",");
             string degreeName = fields[3];
-            if (!degrees.ContainsKey(degreeName)) {
+            if (!degrees.ContainsKey(degreeName))
+            {
                 degrees.Add(degreeName, 1);
-            } else {
+            }
+            else
+            {
                 degrees[degreeName]++;
             }
         }
@@ -192,20 +195,16 @@ public static class SetsAndMapsTester
     /// #############
     private static bool IsAnagram(string word1, string word2)
     {
-        // Todo Problem 3 - ADD YOUR CODE HERE
-        /* Steps:
-            TODO HAVE TO USE A DICTIONARY, NEED TO CHANGE THESE STEPS TO USE DICTIONARY
-
-            1. split word1 into array by spaces
-            2. split word2 into array by spaces
-            3. check if word1 array length is equal to word2 length
-            4. if #3 is false, that's an auto-fail & return false
-            5. if #3 is true, use Array.Sort(word1) & Array.Sort(word2) to sort them alphabetically
-            6. In #5's if statement: create a for (not foreach) loop that iterates through word1
-            7. In #6's for loop: check if each item (using ToLowerCase to ignore case) matches the same item in word2.
-            8. If #7's if statement: if word1's item does not match word2's item, return false. Else continue next iteration.
-            9. Outside of #6's for loop, return true.
+        /*
+         ****************************************
+         *  Check if anagram with arrays
+         *  Uncomment the block below to test
+         *  Recomment it when you use the other method (above)
+         ****************************************
         */
+
+        word1 = word1.ToLower().Replace(" ", "");
+        word2 = word2.ToLower().Replace(" ", "");
 
         if (word1.Length != word2.Length) { return false; }
 
@@ -214,9 +213,11 @@ public static class SetsAndMapsTester
 
         foreach (char item in word1)
         {
-            if (amount1.ContainsKey(item)) {
+            if (amount1.ContainsKey(item))
+            {
                 amount1[item]++;
-            } else
+            }
+            else
             {
                 amount1[item] = 1;
             }
@@ -224,9 +225,11 @@ public static class SetsAndMapsTester
 
         foreach (char item in word2)
         {
-            if (amount2.ContainsKey(item)) {
+            if (amount2.ContainsKey(item))
+            {
                 amount2[item]++;
-            } else
+            }
+            else
             {
                 amount2[item] = 1;
             }
@@ -234,12 +237,44 @@ public static class SetsAndMapsTester
 
         foreach (var item in amount1)
         {
-            if (!amount2.ContainsKey(item.Key) || amount2[item.Key] != item.Value) {
+            if (!amount2.ContainsKey(item.Key) || amount2[item.Key] != item.Value)
+            {
                 return false;
             }
         }
 
         return true;
+
+        /**********************************************************************************/
+        /**********************************************************************************/
+        /**********************************************************************************/
+        /**********************************************************************************/
+
+        /*
+         ****************************************
+         *  Check if anagram with arrays
+         *  Uncomment the block below to test
+         *  Recomment it when you use the other method (above)
+         ****************************************
+        */
+
+        // char[] word1Array = word1.ToLower().Replace(" ", "").ToCharArray();
+        // char[] word2Array = word2.ToLower().Replace(" ", "").ToCharArray();
+
+        // if (word1Array.Length != word2Array.Length) { return false; }
+
+        // Array.Sort(word1Array);
+        // Array.Sort(word2Array);
+
+        // for (int i = 0; i < word1Array.Length; i++)
+        // {
+        //     if (word1Array[i] != word2Array[i]) {
+        //         return false;
+        //     }
+        // }
+
+        // return true;
+
     }
 
     /// <summary>
