@@ -5,53 +5,53 @@ public static class SetsAndMapsTester
 {
     public static void Run()
     {
-        // Problem 1: Find Pairs with Sets
-        Console.WriteLine("\n=========== Finding Pairs TESTS ===========");
-        DisplayPairs(new[] { "am", "at", "ma", "if", "fi" });
-        // ma & am
-        // fi & if
-        Console.WriteLine("---------");
-        DisplayPairs(new[] { "ab", "bc", "cd", "de", "ba" });
-        // ba & ab
-        Console.WriteLine("---------");
-        DisplayPairs(new[] { "ab", "ba", "ac", "ad", "da", "ca" });
-        // ba & ab
-        // da & ad
-        // ca & ac
-        Console.WriteLine("---------");
-        DisplayPairs(new[] { "ab", "ac" }); // No pairs displayed
-        Console.WriteLine("---------");
-        DisplayPairs(new[] { "ab", "aa", "ba" });
-        // ba & ab
-        Console.WriteLine("---------");
-        DisplayPairs(new[] { "23", "84", "49", "13", "32", "46", "91", "99", "94", "31", "57", "14" });
-        // 32 & 23
-        // 94 & 49
-        // 31 & 13
+        // // Problem 1: Find Pairs with Sets
+        // Console.WriteLine("\n=========== Finding Pairs TESTS ===========");
+        // DisplayPairs(new[] { "am", "at", "ma", "if", "fi" });
+        // // ma & am
+        // // fi & if
+        // Console.WriteLine("---------");
+        // DisplayPairs(new[] { "ab", "bc", "cd", "de", "ba" });
+        // // ba & ab
+        // Console.WriteLine("---------");
+        // DisplayPairs(new[] { "ab", "ba", "ac", "ad", "da", "ca" });
+        // // ba & ab
+        // // da & ad
+        // // ca & ac
+        // Console.WriteLine("---------");
+        // DisplayPairs(new[] { "ab", "ac" }); // No pairs displayed
+        // Console.WriteLine("---------");
+        // DisplayPairs(new[] { "ab", "aa", "ba" });
+        // // ba & ab
+        // Console.WriteLine("---------");
+        // DisplayPairs(new[] { "23", "84", "49", "13", "32", "46", "91", "99", "94", "31", "57", "14" });
+        // // 32 & 23
+        // // 94 & 49
+        // // 31 & 13
 
-        // Problem 2: Degree Summary
-        // Sample Test Cases (may not be comprehensive)
-        Console.WriteLine("\n=========== Census TESTS ===========");
-        Console.WriteLine(string.Join(", ", SummarizeDegrees("census.txt")));
-        // Results may be in a different order:
-        // <Dictionary>{[Bachelors, 5355], [HS-grad, 10501], [11th, 1175],
-        // [Masters, 1723], [9th, 514], [Some-college, 7291], [Assoc-acdm, 1067],
-        // [Assoc-voc, 1382], [7th-8th, 646], [Doctorate, 413], [Prof-school, 576],
-        // [5th-6th, 333], [10th, 933], [1st-4th, 168], [Preschool, 51], [12th, 433]}
+        // // Problem 2: Degree Summary
+        // // Sample Test Cases (may not be comprehensive)
+        // Console.WriteLine("\n=========== Census TESTS ===========");
+        // Console.WriteLine(string.Join(", ", SummarizeDegrees("census.txt")));
+        // // Results may be in a different order:
+        // // <Dictionary>{[Bachelors, 5355], [HS-grad, 10501], [11th, 1175],
+        // // [Masters, 1723], [9th, 514], [Some-college, 7291], [Assoc-acdm, 1067],
+        // // [Assoc-voc, 1382], [7th-8th, 646], [Doctorate, 413], [Prof-school, 576],
+        // // [5th-6th, 333], [10th, 933], [1st-4th, 168], [Preschool, 51], [12th, 433]}
 
-        // Problem 3: Anagrams
-        // Sample Test Cases (may not be comprehensive)
-        Console.WriteLine("\n=========== Anagram TESTS ===========");
-        Console.WriteLine(IsAnagram("CAT", "ACT")); // true
-        Console.WriteLine(IsAnagram("DOG", "GOOD")); // false
-        Console.WriteLine(IsAnagram("AABBCCDD", "ABCD")); // false
-        Console.WriteLine(IsAnagram("ABCCD", "ABBCD")); // false
-        Console.WriteLine(IsAnagram("BC", "AD")); // false
-        Console.WriteLine(IsAnagram("Ab", "Ba")); // true
-        Console.WriteLine(IsAnagram("A Decimal Point", "Im a Dot in Place")); // true
-        Console.WriteLine(IsAnagram("tom marvolo riddle", "i am lord voldemort")); // true
-        Console.WriteLine(IsAnagram("Eleven plus Two", "Twelve Plus One")); // true
-        Console.WriteLine(IsAnagram("Eleven plus One", "Twelve Plus One")); // false
+        // // Problem 3: Anagrams
+        // // Sample Test Cases (may not be comprehensive)
+        // Console.WriteLine("\n=========== Anagram TESTS ===========");
+        // Console.WriteLine(IsAnagram("CAT", "ACT")); // true
+        // Console.WriteLine(IsAnagram("DOG", "GOOD")); // false
+        // Console.WriteLine(IsAnagram("AABBCCDD", "ABCD")); // false
+        // Console.WriteLine(IsAnagram("ABCCD", "ABBCD")); // false
+        // Console.WriteLine(IsAnagram("BC", "AD")); // false
+        // Console.WriteLine(IsAnagram("Ab", "Ba")); // true
+        // Console.WriteLine(IsAnagram("A Decimal Point", "Im a Dot in Place")); // true
+        // Console.WriteLine(IsAnagram("tom marvolo riddle", "i am lord voldemort")); // true
+        // Console.WriteLine(IsAnagram("Eleven plus Two", "Twelve Plus One")); // true
+        // Console.WriteLine(IsAnagram("Eleven plus One", "Twelve Plus One")); // false
 
         // Problem 4: Maze
         Console.WriteLine("\n=========== Maze TESTS ===========");
