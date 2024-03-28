@@ -197,9 +197,7 @@ public static class SetsAndMapsTester
     {
         /*
          ****************************************
-         *  Check if anagram with arrays
-         *  Uncomment the block below to test
-         *  Recomment it when you use the other method (above)
+         *  Check if anagram with Dictionaries
          ****************************************
         */
 
