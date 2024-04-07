@@ -13,21 +13,10 @@ public class BinarySearchTree : IEnumerable<int>
         Node newNode = new Node(value);
         // If the list is empty, then point both head and tail to the new node.
         if (_root is null)
-        {
             _root = newNode;
-        }
         // If the list is not empty, then only head will be affected.
         else
-        {
-            if (_root.Contains(value))
-            {
-                Console.WriteLine($"{value} is already in the list");
-            }
-            else
-            {
-                _root.Insert(value);
-            }
-        }
+            _root.Insert(value);
     }
 
     /// <summary>
@@ -101,13 +90,8 @@ public class BinarySearchTree : IEnumerable<int>
     public int GetHeight()
     {
         if (_root is null)
-        {
             return 0;
-        }
-        else
-        {
-            return _root.GetHeight();
-        }
+        return _root.GetHeight();
     }
 
     public override string ToString()
